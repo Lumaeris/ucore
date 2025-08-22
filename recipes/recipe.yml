@@ -14,7 +14,7 @@ image-version: stable
 modules:
   - type: script
     snippets:
-      - "dnf5 copr enable @caddy/caddy"
+      - "dnf5 copr enable @caddy/caddy -y"
 
   - type: dnf
     install:
@@ -28,7 +28,7 @@ modules:
     scripts:
       - install-vpn.sh
     snippets:
-      - "dnf5 copr disable @caddy/caddy"
+      - "dnf5 copr disable @caddy/caddy -y"
 
   - type: systemd
     system:
