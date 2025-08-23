@@ -24,12 +24,14 @@ modules:
             - caddy # force installing caddy from copr
         - wget
         - htop
+        - hugo
 
   - type: script
     scripts:
       - install-vpn.sh
     snippets:
       - "dnf5 copr disable @caddy/caddy -y"
+      - "ln -s vi /usr/bin/vim"
 
   - type: systemd
     system:
