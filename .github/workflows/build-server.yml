@@ -1,4 +1,4 @@
-name: bluebuild
+name: Build server
 on:
   schedule:
     - cron:
@@ -27,7 +27,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe.yml
+          - recipe-server.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
