@@ -30,4 +30,9 @@ modules:
     snippets:
       - "dnf5 copr disable @caddy/caddy -y"
 
+  - type: systemd
+    system:
+      disabled:
+        - coreos-oci-migration-motd.service
+
   - type: signing
