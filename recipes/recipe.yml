@@ -27,14 +27,7 @@ modules:
         - hugo
 
   - type: script
-    scripts:
-      - install-vpn.sh
     snippets:
       - "dnf5 copr disable @caddy/caddy -y"
-
-  - type: systemd
-    system:
-      enabled:
-        - x-ui
 
   - type: signing
