@@ -27,11 +27,15 @@ modules:
         - hugo
 
   - type: script
+    scripts:
+      - install-3xui.sh
     snippets:
       - "dnf5 copr disable @caddy/caddy -y"
 
   - type: systemd
     system:
+      enabled:
+        - x-ui
       disabled:
         - coreos-oci-migration-motd.service
 
