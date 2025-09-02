@@ -17,6 +17,10 @@ modules:
       - "dnf5 copr enable @caddy/caddy -y"
 
   - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - pgdev/zola
     install:
       packages:
         - repo: copr:copr.fedorainfracloud.org:group_caddy:caddy
