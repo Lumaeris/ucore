@@ -24,7 +24,7 @@ modules:
             - caddy # force installing caddy from copr
         - wget
         - htop
-        - hugo
+        - zola
 
   - type: script
     scripts:
