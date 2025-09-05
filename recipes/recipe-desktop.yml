@@ -1,0 +1,25 @@
+---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: vedaos
+description: This is my personal OS image.
+# package from https://github.com/Lumaeris/bazzite-ldx-nvidia
+base-image: ghcr.io/lumaeris/vedaos-base
+image-version: latest
+
+modules:
+  - type: dnf
+    repos:
+      cleanup: true
+      files:
+        - https://repository.mullvad.net/rpm/stable/mullvad.repo
+    install:
+      packages:
+        - mullvad-vpn
+        - freerdp
+
+  - type: systemd
+    system:
+      enabled:
+        - mullvad-daemon.service
+
+  - type: signing

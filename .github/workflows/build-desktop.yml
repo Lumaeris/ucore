@@ -1,4 +1,4 @@
-name: Build server
+name: Build desktop
 on:
   schedule:
     - cron:
@@ -6,7 +6,7 @@ on:
         # (20 minutes after last ublue images start building)
   push:
     paths:
-      - "recipes/recipe-server.yml"
+      - "recipes/recipe-desktop.yml"
 
   pull_request:
   workflow_dispatch: # allow manually triggering builds
@@ -27,7 +27,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe-server.yml
+          - recipe-desktop.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
