@@ -25,8 +25,8 @@ modules:
   - type: dnf
     repos:
       cleanup: true
-      copr:
-        - ublue-os/staging
+      files:
+        - https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-%OS_VERSION%/ublue-os-staging-fedora-%OS_VERSION%.repo
     install:
       install-weak-deps: false
       packages:
