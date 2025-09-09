@@ -27,6 +27,7 @@ modules:
       install-weak-deps: false
       packages:
         - gnome-shell-extension-caffeine
+        - gnome-shell-extension-logo-menu
 
   - type: systemd
     system:
