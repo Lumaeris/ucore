@@ -23,11 +23,18 @@ modules:
         - input-remapper
 
   - type: dnf
+    repos:
+      cleanup: true
+      copr:
+        - ublue-os/staging
     install:
       install-weak-deps: false
       packages:
         - gnome-shell-extension-caffeine
         - gnome-shell-extension-logo-menu
+        - gnome-shell-extension-appindicator
+        - gnome-shell-extension-blur-my-shell
+        - gnome-shell-extension-tailscale-gnome-qs
 
   - type: systemd
     system:
