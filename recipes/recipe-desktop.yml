@@ -20,6 +20,7 @@ modules:
       packages:
         - brave-browser
         - mullvad-vpn
+        - keepassxc
 
   - type: systemd
     system:
