@@ -12,15 +12,11 @@ modules:
       cleanup: true
       files:
         - https://repository.mullvad.net/rpm/stable/mullvad.repo
-        - https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
     optfix:
       - "Mullvad VPN"
-      - brave.com
     install:
       packages:
-        - brave-browser
         - mullvad-vpn
-        - keepassxc
 
   - type: systemd
     system:
