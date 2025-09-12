@@ -18,9 +18,7 @@ modules:
       - brave.com
     install:
       packages:
-        - repo: brave-browser
-          packages:
-            - brave-browser
+        - brave-browser
         - mullvad-vpn
 
   - type: systemd
