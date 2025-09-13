@@ -1,0 +1,11 @@
+[customizations.installer.kickstart]
+contents = """
+%post
+bootc switch --mutate-in-place --transport registry ghcr.io/lumaeris/vedaos-server:latest
+%end
+"""
+
+[customizations.installer.modules]
+disable = [
+    "org.fedoraproject.Anaconda.Modules.Payloads"
+]
